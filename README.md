@@ -68,7 +68,7 @@ Let us look a simple program written in C here:
 void main()
 {
   printf("Welcome to the real world!\n");
-  double number1 = 3.987656, number2 = 71.456237, result;
+  double number1 = 3.9876, number2 = 71.456237, result;
   result = number1*number2;
   printf("\nBelow is an example of multiplication of two numbers:");
   printf("\n%lf x %lf = %lf \n",number1,number2,result);
@@ -100,8 +100,8 @@ namespace Rextester
     public static void Main(string[] args)
     {
       var calc = new Calculator();
-      calc.number1 = 9D;
-      calc.number2 = 4D;
+      calc.number1 = 9.0D;
+      calc.number2 = 4.0D;
       calc.Add();
       calc.Subt();
       calc.Mult();
