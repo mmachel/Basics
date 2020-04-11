@@ -43,7 +43,7 @@ _Mathematics and Programming work in mostly of cases together. But if you want t
 ![Programming](Media/programming.jpg)<!-- style="width: 100%" -->
 
 {{6}}
-_I hope it's going to be really funny to learn programming and understand why all machines are result of programming and mathematics._
+_I hope it's going to be really fun to learn programming and understand why all machines are result of programming and mathematics._
  @author
 
 ##Basic Concepts
@@ -252,3 +252,7 @@ _I think now we have basic idea about computer programming together with mathema
 |Wekwedu mwana uyu|
 +-----------------+
 ```````````````````
+
+*****************************
+One day we will be successful
+*****************************
