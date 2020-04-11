@@ -242,7 +242,7 @@ Here is a simple example of swift programming.
 ```swift
 //swift 3.0.2
 let number = 07;
-print("Hello, I'm Swift, a programming language!")
+print("Hello, I'm Swift, a programming language! \n I really enjoyed it.")
 print("The number above is \(number)")
 ```
 @Rextester.eval(@Swift)
