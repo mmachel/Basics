@@ -21,6 +21,10 @@ import: https://raw.githubusercontent.com/liaTemplates/rextester/master/README.m
 
 # C# Programs
 
+To GitHub click [here](https://github.com/mmachel/Basics/blob/master/Program.md)
+
+To LiaScript click [here](https://liascript.io/course/?https://raw.githubusercontent.com/mmachel/Basics/master/Program.md#1)
+
 ## Hello World
 
 Let us look at the simple HelloWorld program and see how it has been written and compiled and it the libraries.

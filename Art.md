@@ -13,6 +13,9 @@ narrator: US English Female
 
 # Art
 
+To LiaScript click [here](https://liascript.io/course/?https://raw.githubusercontent.com/mmachel/Basics/master/Art.md#1)
+
+To GitHub click [here](https://github.com/mmachel/Basics/blob/master/Art.md)
 Art is a diverse range of human activities in creating visual, auditory or performing artifacts, expressing the author's imaginative, conceptual ideas, or technical skill, intended to be appreciated for their beauty or emotional power.
 
 
