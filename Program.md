@@ -44,3 +44,27 @@ namespace Rextester
 
 ```
 @Rextester.eval(@CSharp)
+
+## C# Quiz quetions
+
+1. 
+1. Ist der Satz _"Das .NET Framework besteht aus Common Language Runtime (CLR), Klassenbibliotekt und Kompiler"_  richtig oder falsch?
+[[falsch|(richtig)]]
+
+2. C# ist keine .... Programmiersprache.
+
+[[procedural|objektorientierte|(logische)|funktionale]]
+[[?]] sich an programmierparadigmen erinnern.
+
+3. Wie unterscheidet sich C# gegenüber anderen Programmiersprachen? Richtige Antworte ankreuzen.
+[[X]] Viele Sprachen auf einer Plattform (VB, C++,...)
+[[ ]] Eine Sprache auf vielen Plattformen
+[[X]] Die Anwendungen werden auf .NET Framework ausgeführt.
+[[ ]] Wird durch gcc auf Kommandozeilen kommpiliert.
+[[?]] Welche Konzepte werden von C# aufgegrifen?
+
+4. Die Ausgabe der Informationen wird durch ... in C# ausgeführt.
+[( )] System.out.print();
+[( )] print();
+[(X)] System.Console.WriteLine();
+[( )] printf();
