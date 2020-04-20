@@ -20,9 +20,9 @@ import: https://raw.githubusercontent.com/liaTemplates/rextester/master/README.m
 -->
 
 # Mathematics and Programming
-To LiaScript click [here](https://liascript.io/course/?https://raw.githubusercontent.com/mmachel/Basics/master/README.md#1)
+To LiaScript click [here](https://liascript.io/course/?https://raw.githubusercontent.com/mmachel/Basics/master/Mathpro.md#1)
 
-To GitHub click [here](https://github.com/mmachel/Basics/blob/master/README.md)
+To GitHub click [here](https://github.com/mmachel/Basics/blob/master/Mathpro.md)
 
 {{1}}
 _Mathematics and Programming work in mostly of cases together. But if you want to be good in both area, then you have to work hard to reach your goals_
