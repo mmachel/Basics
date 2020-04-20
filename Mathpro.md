@@ -249,6 +249,16 @@ print("The number above is \(number)")
 
 _I think now we have basic idea about computer programming together with mathematics._
 
+## My Goals
+
+***My next goals are:***
+
+1. programming in C#
+2. Latex tools
+3. English writing, speaking, reading and listening.
+4. Applied mathematical with the same basics I have now and others.
+5. Solve mathematical problems using programming
+
 ## Others
 
 ```````````````````
@@ -256,7 +266,3 @@ _I think now we have basic idea about computer programming together with mathema
 |Wekwedu mwana uyu|
 +-----------------+
 ```````````````````
-
-*****************************
-One day we will be successful
-*****************************
