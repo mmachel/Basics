@@ -47,24 +47,47 @@ namespace Rextester
 
 ## C# Quiz quetions
 
-1. 
-1. Ist der Satz _"Das .NET Framework besteht aus Common Language Runtime (CLR), Klassenbibliotekt und Kompiler"_  richtig oder falsch?
+**1. Das .NET Framework besteht aus Common Language Runtime (CLR), Klassenbibliotekt und Kompiler.**
 [[falsch|(richtig)]]
 
-2. C# ist keine .... Programmiersprache.
+**2. Welche der folgenden Elemente der Paradigmen wird nicht von C# unterstützt?**
 
-[[procedural|objektorientierte|(logische)|funktionale]]
-[[?]] sich an programmierparadigmen erinnern.
+[( )] procedural
+[( )]objektorientiert
+[(X)] logisch
+[( )] funktional
 
-3. Wie unterscheidet sich C# gegenüber anderen Programmiersprachen? Richtige Antworte ankreuzen.
+**3. Wie unterscheidet sich C# gegenüber anderen Programmiersprachen? Richtige Antworte ankreuzen.**
+
 [[X]] Viele Sprachen auf einer Plattform (VB, C++,...)
 [[ ]] Eine Sprache auf vielen Plattformen
 [[X]] Die Anwendungen werden auf .NET Framework ausgeführt.
 [[ ]] Wird durch gcc auf Kommandozeilen kommpiliert.
 [[?]] Welche Konzepte werden von C# aufgegrifen?
 
-4. Die Ausgabe der Informationen wird durch ... in C# ausgeführt.
+**4. Die Ausgabe wird in C# ausgeführt durch...**
+
 [( )] System.out.print();
 [( )] print();
 [(X)] System.Console.WriteLine();
 [( )] printf();
+
+**5. Bei Console.WriteLine() sind Console und WriteLine ...**
+
+[( )] Namespace und Member
+[(X)] Klasse und Methode
+[( )] Assembly und Klasse
+
+**6. Wärend der Kompilierung werden C# Programme physisch verpackt in...**
+
+[( )] Namespace
+[(X)] Assemblies
+[( )] Methode
+[( )] Klasse
+
+7. Die alternative für .NET Framework
+
+[[X]] Mono
+[[X]] DotGNU
+[[X]]Portable.NET
+[[ ]] Java
