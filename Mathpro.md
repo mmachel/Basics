@@ -62,19 +62,22 @@ Let say you have some tasks of mathematics like multiplication of two decimal nu
 
 Let us look a simple program written in C here:
 
+***************
 ```c        Math.c
 #include <stdio.h>
 
 void main()
 {
   printf("Welcome to the real world!\n");
-  double number1 = 3.987656, number2 = 71.456237, result;
+  double number1 = 3.98, number2 = 71.45, result;
   result = number1*number2;
   printf("\nBelow is an example of multiplication of two numbers:");
   printf("\n%lf x %lf = %lf \n",number1,number2,result);
 }
 ```
 @Rextester.C_vc
+
+***************
 
 As I said above that the program has been written in C, **C** is Programming Language, that means, Computer do not speak the same language as we do, but they have there own languages.
 > There are a lot of **Programming Languages** in the IT World, some of them are: **C, C++, C#, Pascal, Java, Python, etc**.
