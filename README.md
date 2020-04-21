@@ -25,3 +25,5 @@ To LiaScript click [here](https://liascript.io/course/?https://raw.githubusercon
 To GitHub click [here](https://github.com/mmachel/Basics/blob/master/README.md)
 
 This is one of my test project to getting started with github and liascript
+
+Join me under atom://teletype/portal/102b3b11-a3d8-4973-b7d3-3b195aadab47
