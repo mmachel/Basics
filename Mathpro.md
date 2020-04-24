@@ -68,7 +68,7 @@ Let us look a simple program written in C here:
 void main()
 {
   printf("Welcome to the real world!\n");
-  double number1 = 3.987656, number2 = 71.456237, result;
+  double number1 = 3.98, number2 = 71.45, result;
   result = number1*number2;
   printf("\nBelow is an example of multiplication of two numbers:");
   printf("\n%lf x %lf = %lf \n",number1,number2,result);
