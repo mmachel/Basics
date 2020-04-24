@@ -20,9 +20,6 @@ import: https://raw.githubusercontent.com/liaTemplates/rextester/master/README.m
 -->
 
 # Mathematics and Programming
-To LiaScript click [here](https://liascript.io/course/?https://raw.githubusercontent.com/mmachel/Basics/master/README.md#1)
-
-To GitHub click [here](https://github.com/mmachel/Basics/blob/master/README.md)
 
 This is one of my test project to getting started with github and liascript
 
