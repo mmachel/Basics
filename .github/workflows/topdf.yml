@@ -1,6 +1,6 @@
 # GitHub Action, die aus den LiaScript-Materialien des Sommersemester 2020 ein
 # Skript generiert
-name: GeneratePDF
+name: GeneratorPDF
 
 # Hier legen wir den Trigger für die Action fest.
 # "Wenn ein Push auf dem branch SoSe2020 realisert wird, werden die
