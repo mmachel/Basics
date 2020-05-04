@@ -1,5 +1,4 @@
-# GitHub Action, die aus den LiaScript-Materialien des Sommersemester 2020 ein
-# Skript generiert
+#PDF Generate
 name: GeneratorPDF
 
 # Hier legen wir den Trigger für die Action fest.
@@ -21,11 +20,11 @@ jobs:
         # Hier ist es jetzt etwas kniffliger. Wir wollen an pandoc eine Liste
         # alle relevanten Dateien übergeben. Dazu brauchen wir eine sogenannte
         # Umgebungsvariable die wir FILELIST nennen. Ihr werden alle Dateinamen
-        # zugewiesen, die auf mdx enden.
+        # zugewiesen, die auf md enden.
       - name: Run preprocessing and set environment variables
         run : |
           python3 .github/workflows/preprocessing.py
-          echo ::set-env name=FILELIST::$(ls *.mdx)
+          echo ::set-env name=FILELIST::$(ls *.md)
           mkdir output
         # Aufruf eines Standard-Docker Containers, in dem pandoc (und Latex)
         # läuft.
