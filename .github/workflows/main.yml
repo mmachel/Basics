@@ -1,5 +1,5 @@
 # Generate a PDF from the MD file.
-name: PDF_Gen
+name: PDF_Generator
 
 # Trigger: Execute on push.
 on:
