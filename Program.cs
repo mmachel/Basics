@@ -9,8 +9,9 @@ namespace Default
     {
         static void Main(string[] args)
         {
-            Person person1 = new Person();
+            Student person1 = new Student();
             person1.WelcomeMessage();
+            person1.Doing();
         }
     }
 }

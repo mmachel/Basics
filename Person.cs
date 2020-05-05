@@ -13,6 +13,7 @@ namespace Default
         public string Status{get;set;}
         public decimal Salary{get;set;}
         public string Address{get;set;}
+        public string Activities{get;set;}
 
         public Person()
         {
@@ -39,6 +40,11 @@ namespace Default
         public void WelcomeMessage()
         {
             System.Console.WriteLine("Welcome to MyApp!");
+        }
+
+        public void Activities()
+        {
+            System.Console.WriteLine("I can {0} and Im good on it.",Activities);
         }
 
     }
