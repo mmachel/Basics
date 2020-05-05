@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Generate a PDF from the MD file.
 name: PDF_Generator
 
@@ -24,3 +25,31 @@ jobs:
         with:
           path: result.pdf
           name: output
+=======
+# Generate a PDF from the MD file.
+name: PDF_Gen
+
+# Trigger: Execute on push.
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current repository
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Convert Markdown to PDF
+        uses: maxheld83/pandoc@v2
+        with:
+          args: "--standalone --output=result.pdf Mathpro.md"
+      - name: Upload resulting PDF as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          path: result.pdf
+          name: output
+>>>>>>> Program
