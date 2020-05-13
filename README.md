@@ -21,6 +21,6 @@ import: https://raw.githubusercontent.com/liaTemplates/rextester/master/README.m
 
 # Mathematics and Programming
 
-This is one of my test project to getting started with github and liascript
+In this repository I am going to write some codes based on C# and and maybe others like C and Python. I am beginner in Programming World.
 
-Join me under atom://teletype/portal/102b3b11-a3d8-4973-b7d3-3b195aadab47
+I accept improvement suggestions on my codes.
