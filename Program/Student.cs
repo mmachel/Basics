@@ -11,7 +11,7 @@ namespace Default
         public int Credit { get; set; }
         public float LearnTime { get; set; }
         List<string> modulo = new List<string>();
-        public Student(string Name, int Age, char Gender, string Status, int Credit, string Address)
+        public Student: this(string Name, int Age, char Gender, string Status, int Credit, string Address)
         {
             this.Name = Name;
             this.BirthYear = Age;
