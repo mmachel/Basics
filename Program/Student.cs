@@ -11,15 +11,9 @@ namespace Default
         public int Credit { get; set; }
         public float LearnTime { get; set; }
         List<string> modulo = new List<string>();
-        public Student: this(string Name, int Age, char Gender, string Status, int Credit, string Address)
-        {
-            this.Name = Name;
-            this.BirthYear = Age;
-            this.Gender = Gender;
-            this.Status = Status;
-            this.Credit = Credit;
-            this.Address = Address;
-        }
+        public Student(string Name, int Age, char Gender, string Status, int Credit, string Address)
+            :base(Name, Age, Gender, Status, Credit, Address) { }
+
         public override void PersonInfo()
         {
             Console.WriteLine($"Name: {Name}");
