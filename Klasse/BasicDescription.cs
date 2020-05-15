@@ -31,7 +31,7 @@ namespace Klasse
         {
             numberOfDevice.Add(bs);
         }
-        public void Ds()
+        public void DisplayDescription()
         {
             Console.WriteLine();
             Console.WriteLine("Device name: {0}",Name);
@@ -41,7 +41,7 @@ namespace Klasse
             Console.WriteLine("Color: {0}",Cor);
             Console.WriteLine("Date of Publication: {0}",DateOfPublication.Year);
             Console.WriteLine("Country: {0}",ManufactureCountry);
-            System.Console.WriteLine();
+            //Console.WriteLine();
         }
         public void Display()
         {
@@ -49,7 +49,8 @@ namespace Klasse
             foreach (var item in numberOfDevice)
             {
                 Console.Write("Device {0}:",i);
-                item.Ds();
+                item.DisplayDescription();
+                Console.WriteLine();
                 i++;
             }
         }

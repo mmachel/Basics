@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program", "Program\Program.csproj", "{7079B238-C864-489E-A52F-6844976607DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimNumbers", "PrimNumbers\PrimNumbers.csproj", "{BE0C2B30-20A5-44B5-A58B-1641B4956633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimNumbers", "PrimNumbers\PrimNumbers.csproj", "{BE0C2B30-20A5-44B5-A58B-1641B4956633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klasse", "Klasse\Klasse.csproj", "{59F4DBB2-9A39-46AF-9BB3-83453CB23881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BE0C2B30-20A5-44B5-A58B-1641B4956633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE0C2B30-20A5-44B5-A58B-1641B4956633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE0C2B30-20A5-44B5-A58B-1641B4956633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F4DBB2-9A39-46AF-9BB3-83453CB23881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F4DBB2-9A39-46AF-9BB3-83453CB23881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F4DBB2-9A39-46AF-9BB3-83453CB23881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F4DBB2-9A39-46AF-9BB3-83453CB23881}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
