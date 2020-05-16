@@ -13,7 +13,9 @@ namespace Klasse
             var list = new BasicDescription();
             list.Add(mobile);
             list.Add(pc);
-            //mobile.DisplayMobile();
+            mobile.DisplayMobile();
+
+            mobile.Price();
 
             var laptop = new Laptop
             {
@@ -23,7 +25,7 @@ namespace Klasse
             };
             //Console.WriteLine(laptop.Name);
             list.Add(laptop);
-            list.Display();
+           // list.Display();
             Console.ReadKey();
         }
     }

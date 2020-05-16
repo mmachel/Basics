@@ -12,7 +12,8 @@ namespace Klasse
         public string ModelNumber { get; set; }
         public string ManufactureCountry { get; set; }
         public string OperatingSystem { get; set; }
-        List<BasicDescription> numberOfDevice = new List<BasicDescription>();
+
+        readonly List<BasicDescription> numberOfDevice = new List<BasicDescription>();
         public BasicDescription(){} 
         public BasicDescription(string Name, string Manufactur,
          DateTime DateOfPublication, string Cor,string ModelNumber,
@@ -54,6 +55,10 @@ namespace Klasse
                 i++;
             }
         }
-        
+
+        public virtual decimal DevicePrice()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
