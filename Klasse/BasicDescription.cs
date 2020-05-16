@@ -56,7 +56,7 @@ namespace Klasse
             }
         }
 
-        public virtual decimal DevicePrice()
+        protected virtual decimal DevicePriceContinentBased()
         {
             throw new NotImplementedException();
         }

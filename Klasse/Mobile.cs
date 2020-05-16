@@ -8,36 +8,52 @@ namespace Klasse
     {
         
         public bool Camera { get; set; }
+        public string Continent { get; set; }
         public Mobile() : base(){}
-
-        readonly decimal FixPrice = 649.99m;
+  
         public Mobile(string Name, string Manufactur, DateTime DateOfPublication, string Cor,
         string ModelNumber,string ManufactureCountry, string OperatingSystem, bool Camera)
         :base(Name, Manufactur, DateOfPublication, Cor,ModelNumber,ManufactureCountry,OperatingSystem)
         {
             this.Camera = Camera;
         }
-
-        public override decimal DevicePrice()
+        private decimal FixPriceModelBased()
+        {
+            decimal DeviceFixPrice;
+            if (ModelNumber== "SM-N9500")
+            {
+               DeviceFixPrice = 600m;
+            }
+            else if (ModelNumber=="SM-J110M")
+            {
+                DeviceFixPrice = 129;
+            }
+            else
+            {
+                return 0;
+            }
+            return DeviceFixPrice;
+        }
+        protected override decimal DevicePriceContinentBased()
         {
             Console.Write("Please enter the continent: ");
-            string continent = Console.ReadLine();
+            Continent = Console.ReadLine();
             decimal temporaryPrice=0;
-            switch(continent)
+            switch(Continent)
             {
-                case "Africa": temporaryPrice = FixPrice * 1.5m;
+                case "Africa": temporaryPrice = FixPriceModelBased() * 1.5m;
                     break;
-                case "America": temporaryPrice = FixPrice * 1.8m;
+                case "America": temporaryPrice = FixPriceModelBased() * 1.8m;
                     break;
-                case "South America": temporaryPrice = FixPrice * 1.58m;
+                case "South America": temporaryPrice = FixPriceModelBased() * 1.58m;
                     break;
-                case "Europe": temporaryPrice = FixPrice * 1.77m;
+                case "Europe": temporaryPrice = FixPriceModelBased() * 1.77m;
                     break;
-                case "Asia": temporaryPrice = FixPrice * 1.62m;
+                case "Asia": temporaryPrice = FixPriceModelBased() * 1.62m;
                     break;
-                case "Australia": temporaryPrice = FixPrice * 1.48m;
+                case "Australia": temporaryPrice = FixPriceModelBased() * 1.48m;
                     break;
-                case "Antarctica": temporaryPrice = FixPrice * 1.65m;
+                case "Antarctica": temporaryPrice = FixPriceModelBased() * 1.65m;
                     break;
                 default: Console.WriteLine("There is no continent with this name, please verify and try again.");
                     break;
@@ -48,7 +64,7 @@ namespace Klasse
         }
         public void Price()
         {
-            Console.WriteLine("Price: {0:C2}",DevicePrice());
+            Console.WriteLine("{0}: {1:C2}",ModelNumber,DevicePriceContinentBased());
         }
         public void DisplayMobile()
         {
