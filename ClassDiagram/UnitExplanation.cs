@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassDiagram
 {
-    public static class UnitExplanation
+    public class UnitExplanation
     {
         public static void Units()
         {
