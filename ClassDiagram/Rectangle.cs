@@ -53,11 +53,17 @@ namespace ClassDiagram
             double perimeter = 2*Width + 2*Length;
             return perimeter;
         }
+        private double Diagonal()
+        {
+            double diagonal = Math.Sqrt(Width * Width + Length * Length);
+            return diagonal;
+        }
         public void DisplayShape()
         {
             Console.WriteLine($"{RectangleNr}. Rectangle: ");
             Console.WriteLine($"Rectangle area: {Area():F2} AU");
             Console.WriteLine($"Rectangle parameter: {Perimeter():F2} DU");
+            Console.WriteLine($"Rectangle diagonal: {Diagonal():F2} DU");
             Console.WriteLine();
         }
     }

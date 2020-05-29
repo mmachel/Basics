@@ -18,6 +18,9 @@ namespace ClassDiagram
             var cd = new Distance(C, D);
             var da = new Distance(D, A);
 
+            //Unit explanation
+            UnitExplanation.Units();
+
             //Triangle test
             var iso = (TriangleType)0;
             var rect = (TriangleType)1;
