@@ -28,11 +28,6 @@ namespace ClassDiagram
             CircleNr = count++;
         }
 
-        public new void Draw()
-        {
-            Console.WriteLine("Drawing the circle");
-        }
-
         public Point get_center()
         {
             return Center;
@@ -58,6 +53,10 @@ namespace ClassDiagram
         public void set_radius(double radius)
         {
             Radius = radius;
+        }
+        public override void Draw()
+        {
+            Console.WriteLine("Drawing circles");
         }
         public double Area()
         {

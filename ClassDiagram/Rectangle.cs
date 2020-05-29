@@ -44,6 +44,10 @@ namespace ClassDiagram
         {
             Length = length.distance();
         }
+        public override void Draw()
+        {
+            Console.WriteLine("Drawing rectangles");
+        }
         private double Area()
         {
             return Width * Length;

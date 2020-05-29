@@ -21,11 +21,12 @@
       <HashCode>AAAAAAAAAQAAAgAABAAARAAAAAAAAAAAEQAAAQAAAAA=</HashCode>
       <FileName>Triangle.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClassDiagram.Rectangle">
     <Position X="5.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAABAQAAAAAABkAACEBAAAAAAAAAAAAAAQAAIAA=</HashCode>
+      <HashCode>AAAAEAABAQAAAgAABkAACEBAAAAAAAAAAAAAAQAAIAA=</HashCode>
       <FileName>Rectangle.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

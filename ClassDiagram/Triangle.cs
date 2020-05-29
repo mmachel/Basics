@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassDiagram
 {
-    public class Triangle : Shape
+    public class Triangle : Shape, IShapeInfo
     {
         private TriangleType Type;
         private Point[] Vertices;
@@ -28,13 +28,17 @@ namespace ClassDiagram
                 Console.WriteLine("Triangle should have three vertices.");
                 return;
             }
-            
+
             TriangleNr = count++;
         }
 
         public TriangleType get_type()
         {
             return Type;
+        }
+        public override void Draw()
+        {
+            Console.WriteLine("Drawing triangle");
         }
         private double Area()
         {
@@ -61,11 +65,6 @@ namespace ClassDiagram
             double ca = new Distance(c, a).distance();
             perimeter = ab + bc + ca;
             return perimeter;
-        }
-        
-        public new void Draw()
-        {
-            Console.WriteLine("Drwaing triangle");
         }
         public void DisplayShape()
         {

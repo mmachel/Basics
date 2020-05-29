@@ -6,9 +6,6 @@ namespace ClassDiagram
 {
     public abstract class Shape
     {
-        public void Draw()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Draw();
     }
 }
