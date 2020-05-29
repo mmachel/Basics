@@ -71,7 +71,7 @@ namespace ClassDiagram
             Console.WriteLine($"{TriangleNr}. Triangle: ");
             Console.WriteLine($"Triangle type: {Type}");
             Console.WriteLine($"Triangle area: {Area():F2} AU");
-            Console.WriteLine($"Triangle parameter: {Perimeter():F2} DU");
+            Console.WriteLine($"Triangle perimeter: {Perimeter():F2} DU");
             Console.WriteLine();
         }
     }

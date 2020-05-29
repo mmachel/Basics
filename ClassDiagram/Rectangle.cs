@@ -66,7 +66,7 @@ namespace ClassDiagram
         {
             Console.WriteLine($"{RectangleNr}. Rectangle: ");
             Console.WriteLine($"Rectangle area: {Area():F2} AU");
-            Console.WriteLine($"Rectangle parameter: {Perimeter():F2} DU");
+            Console.WriteLine($"Rectangle perimeter: {Perimeter():F2} DU");
             Console.WriteLine($"Rectangle diagonal: {Diagonal():F2} DU");
             Console.WriteLine();
         }

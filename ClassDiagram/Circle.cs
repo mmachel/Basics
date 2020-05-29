@@ -72,7 +72,7 @@ namespace ClassDiagram
         {
             Console.WriteLine($"{CircleNr}. Circle: ");
             Console.WriteLine($"Circle area: {Area():F2} AU");
-            Console.WriteLine($"Circle parameter: {Perimeter():F2} DU");
+            Console.WriteLine($"Circle perimeter: {Perimeter():F2} DU");
             Console.WriteLine();
         }
     }
