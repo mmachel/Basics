@@ -17,14 +17,19 @@ namespace ClassDiagram
         public Circle() { }
         public Circle(Point center, Point edge)
         {
-            this.Center = center;
-            this.Edge = edge;
-            this.Radius = new Distance(Center, Edge).distance();
+            Center = center;
+            Edge = edge;
+            Radius = new Distance(Center, Edge).distance();
             CircleNr = count++;
         }
         public Circle(Distance radius)
         {
             Radius = radius.distance();
+            CircleNr = count++;
+        }
+        public Circle(double Radius)
+        {
+            this.Radius = Radius;
             CircleNr = count++;
         }
 

@@ -22,10 +22,10 @@ namespace ClassDiagram
             UnitExplanation.Units();
 
             //Triangle test
-            var iso = (TriangleType)0;
-            var rect = (TriangleType)1;
-            var obt = (TriangleType)2;
-            var equi = (TriangleType)3;
+            var iso = TriangleType.Isosceles;
+            var rect = TriangleType.Rectangular;
+            var obt = TriangleType.Obtuse;
+            var equi = TriangleType.Echilateral;
             var t1 = new Triangle(iso, A, B, C);
             var t2 = new Triangle(rect, D,C,B);
             var t3 = new Triangle(obt, C, B, D);
@@ -44,12 +44,48 @@ namespace ClassDiagram
 
             //Rectangle test
             var rect1 = new Rectangle(ab,bc);
-            var rect2 = new Rectangle(5, 4);
+            var rect2 = new Rectangle(3, 4);
             rect1.DisplayShape();
             rect2.DisplayShape();
             rect1.set_width(da);
             rect1.DisplayShape();
 
+            //Cylinder test
+            var cyl1 = new Cylinder(A, B, C);
+            var cyl2 = new Cylinder(3, 5);
+            cyl1.Draw();
+            cyl1.DisplayShape();
+            cyl2.DisplayShape();
+
+            //Sphere test
+            var sphere1 = new Sphere(A, B);
+            var sphere2 = new Sphere(7.5);
+            sphere1.Draw();
+            sphere1.DisplayShape();
+            sphere2.DisplayShape();
+
+            //Hemisphere test
+            var hs1 = new Hemisphere(B, D);
+            var hs2 = new Hemisphere(3.7);
+            hs1.Draw();
+            hs1.DisplayShape();
+            hs2.DisplayShape();
+
+            //Cone test
+            var cone1 = new Cones(A, B, C);
+            var cone2 = new Cones(2.5, 4, 5);
+            cone1.Draw();
+            cone1.DisplayShape();
+            cone2.DisplayShape();
+
+            //Cuboid test
+            var cub1 = new Cuboid(5.0,6.0,7.0);
+            var cub2 = new Cuboid(3.0);
+            var cub3 = new Cuboid(A, B, C, D);
+            cub1.Draw();
+            cub1.DisplayShape();
+            cub2.DisplayShape();
+            cub3.DisplayShape();
         }
     }
 }

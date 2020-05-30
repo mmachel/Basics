@@ -11,6 +11,7 @@ namespace ClassDiagram
             Console.WriteLine("Units explanation: ");
             Console.WriteLine("DU - Distance unit");
             Console.WriteLine("AU - Area unit");
+            Console.WriteLine("VU - Volume unit");
             Console.WriteLine();
         }
     }
