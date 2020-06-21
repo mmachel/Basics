@@ -45,10 +45,18 @@ namespace ClassDiagram
             //Rectangle test
             var rect1 = new Rectangle(ab,bc);
             var rect2 = new Rectangle(3, 4);
+            rect1.Draw();
             rect1.DisplayShape();
             rect2.DisplayShape();
-            rect1.set_width(da);
-            rect1.DisplayShape();
+            //rect1.set_width(da);
+            //rect1.DisplayShape();
+
+            //Square test
+            var sq1 = new Square(4);
+            var sq2 = new Square(ab);
+            sq1.Draw();
+            sq1.DisplayShape();
+            sq2.DisplayShape();
 
             //Cylinder test
             var cyl1 = new Cylinder(A, B, C);

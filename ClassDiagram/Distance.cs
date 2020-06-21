@@ -20,5 +20,10 @@ namespace ClassDiagram
             distance = Math.Sqrt((B.X-A.X)* (B.X - A.X) + (B.Y - A.Y)*(B.Y - A.Y));
             return distance;
         }
+
+        public static implicit operator Distance(double v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

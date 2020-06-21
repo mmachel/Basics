@@ -7,8 +7,8 @@ namespace ClassDiagram
 {
     public class Rectangle : Shape, IShapeInfo
     {
-        private double Width;
-        private double Length;
+        public double Width { get; set; }
+        public double Length { get; set; }
         private static int count = 1;
         public int RectangleNr { get; }
 
