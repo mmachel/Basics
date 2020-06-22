@@ -173,6 +173,7 @@ namespace Pets
                 }
             }
             // var istr = z as IStrokeable;
+            Console.WriteLine("The end of the zoologic");
         }
     }
 }
