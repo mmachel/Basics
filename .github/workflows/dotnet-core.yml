@@ -3,7 +3,7 @@ name: generate_UMLDiagramm_from_Csharp
 on:
   push:                           
     paths: |                           
-      - 'ClassDiagram/**.cs' 
+      - 'Pets/**.cs' 
 
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
  
     - name: Generate UML Files
       run: |
-           puml-gen ClassDiagram/**.cs ClassDiagram/main.puml -createAssociation
+           puml-gen Pets/**.cs ClassDiagram/main.puml -createAssociation
            cd ClassDiagram
            dir
            cd ..
