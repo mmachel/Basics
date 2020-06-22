@@ -3,7 +3,7 @@ name: generate_UMLDiagramm_from_Csharp
 on:
   push:                           
     paths: |                           
-      - 'Pets/**.cs' 
+      - 'Pets/Program.cs' 
 
 
 jobs:
@@ -26,25 +26,25 @@ jobs:
  
     - name: Generate UML Files
       run: |
-           puml-gen Pets/**.cs ClassDiagram/main.puml -createAssociation
-           cd ClassDiagram
+           puml-gen Pets/Program.cs Pets/main.puml -createAssociation
+           cd Pets
            dir
            cd ..
  
     - uses: EndBug/add-and-commit@v4 
       with:
-        add: "ClassDiagram/main.puml"
+        add: "Pets/main.puml"
         author_name: GitHubAction
         message: "Add new version of plantUML file"
 
     - name: Generate PNG Diagrams
       uses: lokkju/github-action-plantuml@master
       with:
-        args: ClassDiagram/main.puml
+        args: Pets/main.puml
 
     - uses: EndBug/add-and-commit@v4 
       with:
-        add: "ClassDiagram/main.png"
+        add: "Pets/main.png"
         author_name: GitHubAction
         message: 'Add new class diagramm'
 
