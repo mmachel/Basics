@@ -7,26 +7,26 @@
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClassDiagram.Circle">
-    <Position X="1" Y="2.5" Width="1.5" />
+  <Class Name="ClassDiagram.Circle" Collapsed="true">
+    <Position X="1" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIEIAABAAQQAAgAABAAQCAAAAAAABAAAAAAAAQAIAAA=</HashCode>
+      <HashCode>AAAIAAAAAQAAAgAABAAACAAAAAAABAAAAAAAAQAIAAA=</HashCode>
       <FileName>Circle.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ClassDiagram.Triangle">
-    <Position X="3.25" Y="2.5" Width="1.5" />
+  <Class Name="ClassDiagram.Triangle" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAgAABAAARAAAAAAAAAAAEQAAAQAAAAA=</HashCode>
+      <HashCode>AAAAABAAAQAAAgAAAACAAAAAAAAAAAAAAQAAAQBAAAA=</HashCode>
       <FileName>Triangle.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ClassDiagram.Rectangle">
+  <Class Name="ClassDiagram.Rectangle" Collapsed="true">
     <Position X="5.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAABAQAAAgAABkAACEBAAAAAAAAAAAAAAQAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAgAABEAACEBAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Rectangle.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -34,7 +34,7 @@
   <Class Name="ClassDiagram.Distance">
     <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAIAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAEAAAAAAAAAAIAEAAAA=</HashCode>
       <FileName>Distance.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,7 +45,7 @@
       <FileName>UnitExplanation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClassDiagram.Sphere">
+  <Class Name="ClassDiagram.Sphere" Collapsed="true">
     <Position X="7.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAgAABAAAAAAAAAAABAAEAAIAAQAIAAA=</HashCode>
@@ -53,30 +53,30 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ClassDiagram.Cylinder">
-    <Position X="1" Y="7.5" Width="1.5" />
+  <Class Name="ClassDiagram.Cylinder" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABBAAAAgAABAAAAAABAAAAAAAAACIAAQAAAAA=</HashCode>
       <FileName>Cylinder.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ClassDiagram.Cones">
-    <Position X="3.5" Y="7.75" Width="1.5" />
+  <Class Name="ClassDiagram.Cones" Collapsed="true">
+    <Position X="1" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAABAIAAABAAAAAAAAAACIAAQAAAAA=</HashCode>
       <FileName>Cones.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ClassDiagram.Hemisphere">
-    <Position X="7.25" Y="6.5" Width="1.5" />
+  <Class Name="ClassDiagram.Hemisphere" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAgAABAAAAAAAAAAAAAAAACIAAQAAAAA=</HashCode>
       <FileName>Hemisphere.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClassDiagram.Cuboid">
+  <Class Name="ClassDiagram.Cuboid" Collapsed="true">
     <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAABAAAIgAABAAAAABAQgAAAAIAAAIAAQQAAAA=</HashCode>
@@ -87,15 +87,29 @@
   <Class Name="ClassDiagram.Program" Collapsed="true">
     <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClassDiagram.Square">
-    <Position X="5.25" Y="7.25" Width="1.5" />
+  <Class Name="ClassDiagram.Square" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAABAAAAAAAAAAIAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassDiagram.TriangleWithAngle" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAEAAAQAAAAA=</HashCode>
+      <FileName>TriangleWithAngle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassDiagram.TriangleWithSides" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAQCAAAA=</HashCode>
+      <FileName>TriangleWithSides.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="ClassDiagram.Point">
@@ -112,8 +126,8 @@
       <FileName>IShapeInfo.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="ClassDiagram.TriangleType">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+  <Enum Name="ClassDiagram.TriangleType" Collapsed="true">
+    <Position X="8.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAAIAAAACA=</HashCode>
       <FileName>TriangleType.cs</FileName>

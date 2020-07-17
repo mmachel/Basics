@@ -1,78 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassDiagram
 {
-    public class Triangle : Shape, IShapeInfo
+    public abstract class Triangle : Shape, IShapeInfo
     {
-        private TriangleType Type;
-        private Point[] Vertices;
-        private static int count = 1;
-        private int TriangleNr { get; }
+        //Fields and properties
+        public TriangleType Type { get; set; }
+        public double Side1 { get; set; }
+        public double Side2 { get; set; }
+        public double Side3 { get; set; }
 
+        //Constructores
         public Triangle() { }
-        public Triangle(TriangleType type, params Point[] vertices)
+        public Triangle(Point A, Point B, Point C)
         {
-            this.Type = type;
-            try
-            {
-                if (vertices.Length == 3)
-                {
-                    this.Vertices = vertices;
-                }
-            }
-            catch (Exception)
-            {
-
-                Console.WriteLine("Triangle should have three vertices.");
-                return;
-            }
-
-            TriangleNr = count++;
+            Side1 = new Distance(A, B).distance();
+            Side2 = new Distance(B, C).distance();
+            Side3 = new Distance(C, A).distance();
+        }
+        public Triangle(double side1, double side2, double side3)
+        {
+            Side1 = side1;
+            Side2 = side2;
+            Side3 = side3;
         }
 
-        public TriangleType get_type()
-        {
-            return Type;
-        }
-        public override void Draw()
-        {
-            Console.WriteLine("Drawing triangle");
-        }
-        private double Area()
-        {
-            double area;
-
-            Point a = Vertices[0];
-            Point b = Vertices[1];
-            Point c = Vertices[2];
-            double ab = new Distance(a, b).distance();
-            double bc = new Distance(b, c).distance();
-            double ca = new Distance(c, a).distance();
-            double s = (ab + bc + ca) / 2;
-            area = Math.Sqrt(s * (s - ab) * (s - bc) * (s - ca));
-            return area;
-        }
-        private double Perimeter()
-        {
-            double perimeter;
-            Point a = Vertices[0];
-            Point b = Vertices[1];
-            Point c = Vertices[2];
-            double ab = new Distance(a, b).distance();
-            double bc = new Distance(b, c).distance();
-            double ca = new Distance(c, a).distance();
-            perimeter = ab + bc + ca;
-            return perimeter;
-        }
+        //Methods
+        public override void Draw() => Console.WriteLine("Drawing triangle");
+        public double Perimeter() => Side1 + Side2 + Side3;
         public void DisplayShape()
         {
-            Console.WriteLine($"{TriangleNr}. Triangle: ");
-            Console.WriteLine($"Triangle type: {Type}");
-            Console.WriteLine($"Triangle area: {Area():F2} AU");
-            Console.WriteLine($"Triangle perimeter: {Perimeter():F2} DU");
-            Console.WriteLine();
+            throw new NotImplementedException();
         }
+        //private double area => Side3 !=0 ? AreaWithSides() : AreaWithSideAndAngle();
+
     }
 }

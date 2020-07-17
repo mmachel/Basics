@@ -14,6 +14,10 @@ namespace ClassDiagram
             this.A = A;
             this.B = B;
         }
+        /// <summary>
+        /// Derermine the distance between two points
+        /// </summary>
+        /// <returns>Return distance as double number.</returns>
         public double distance()
         {
             double distance;
@@ -23,7 +27,8 @@ namespace ClassDiagram
 
         public static implicit operator Distance(double v)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return v;
         }
     }
 }

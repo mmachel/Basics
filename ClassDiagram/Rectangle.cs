@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text;
 
 namespace ClassDiagram
 {
@@ -12,56 +9,33 @@ namespace ClassDiagram
         private static int count = 1;
         public int RectangleNr { get; }
 
-        public Rectangle(Distance width, Distance length)
-        {
-            Width = width.distance();
-            Length = length.distance();
-            RectangleNr = count++;
-        }
+        public Rectangle() { RectangleNr = count++; }
         public Rectangle(double width, double length)
         {
             Width = width;
             Length = length;
             RectangleNr = count++;
         }
-
-        public double get_width()
+        /// <summary>
+        /// A|-----------|D
+        ///  |           |
+        ///  |           |
+        /// B|-----------|C
+        /// The rectange has four ponts, but we need only three to calculate area and perimeter
+        /// </summary>
+        /// <param name="A">Point A of rectangle</param>
+        /// <param name="B">Point B of rectangle </param>
+        /// <param name="D">Point D of rectangle</param>
+        public Rectangle(Point A, Point B,Point D)
         {
-            return Width;
+            Length = new Distance(A, B).distance();
+            Width = new Distance(A, D).distance();
+            RectangleNr = count++;
         }
-
-        public double get_height()
-        {
-            return Length;
-        }
-
-        public void set_width(Distance wid)
-        {
-            Width = wid.distance();
-        }
-
-        public void set_height(Distance length)
-        {
-            Length = length.distance();
-        }
-        public override void Draw()
-        {
-            Console.WriteLine("Drawing rectangles");
-        }
-        private double Area()
-        {
-            return Width * Length;
-        }
-        private double Perimeter()
-        {
-            double perimeter = 2*Width + 2*Length;
-            return perimeter;
-        }
-        private double Diagonal()
-        {
-            double diagonal = Math.Sqrt(Width * Width + Length * Length);
-            return diagonal;
-        }
+        public override void Draw() => Console.WriteLine("Drawing rectangles");
+        public double Area() => Width * Length;
+        public double Perimeter() => 2 * Width + 2 * Length;
+        public double Diagonal() => Math.Sqrt(Width * Width + Length * Length);
         public void DisplayShape()
         {
             Console.WriteLine($"{RectangleNr}. Rectangle: ");

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassDiagram
 {
@@ -25,21 +23,9 @@ namespace ClassDiagram
             this.Radius = Radius;
             SphereNr = count++;
         }
-        public override void Draw()
-        {
-            Console.WriteLine("Drawing sphere...");
-        }
-        private double Area()
-        {
-            double area = 4 * Math.PI * Radius * Radius;
-            return area;
-        }
-        private double Volume()
-        {
-            double volume = 4.0 * Math.PI * Radius * Radius * Radius / 3;
-            return volume;
-        }
-
+        public override void Draw() => Console.WriteLine("Drawing sphere...");
+        private double Area() => 4 * Math.PI * Radius * Radius;
+        private double Volume() => 4.0 * Math.PI * Radius * Radius * Radius / 3;
         public void DisplayShape()
         {
             Console.WriteLine($"{SphereNr}. Sphere: ");

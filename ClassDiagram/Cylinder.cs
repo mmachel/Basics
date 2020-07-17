@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassDiagram
 {
@@ -11,7 +9,7 @@ namespace ClassDiagram
         private static int count = 1;
         public int CylinderNr { get; }
 
-        public Cylinder() { }
+        public Cylinder() { CylinderNr = count++; }
         public Cylinder(double Radius, double Height) : base(Radius)
         {
             this.Height = Height;
@@ -24,25 +22,10 @@ namespace ClassDiagram
             CylinderNr = count++;
         }
 
-        public override void Draw()
-        {
-            Console.WriteLine("Drwaing cylinder.");
-        }
-        private new double Area()
-        {
-            double area = 2 * Math.PI * get_radius() * (get_radius() + Height);
-            return area;
-        }
-        private double CurvedArea()
-        {
-            double area = 2 * Math.PI * get_radius() * Height;
-            return area;
-        }
-        private double Volume()
-        {
-            double volume = Math.PI * get_radius() * get_radius() * Height;
-            return volume;
-        }
+        public override void Draw() => Console.WriteLine("Drwaing cylinder.");
+        public new double Area() => 2 * Math.PI * Radius * (Radius + Height);
+        public double CurvedArea() => 2 * Math.PI * Radius * Height;
+        public double Volume() => Math.PI * Radius * Radius * Height;
         public new void DisplayShape()
         {
             Console.WriteLine($"{CylinderNr}. Cylinder: ");

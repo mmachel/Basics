@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassDiagram
 {
@@ -21,25 +19,10 @@ namespace ClassDiagram
             Length = new Distance(Edge, CenterTop).distance();
             ConeNr = count++;
         }
-        public override void Draw()
-        {
-            Console.WriteLine("Drawing cone...");
-        }
-        private new double Area()
-        {
-            double area = Math.PI * get_radius() * (get_radius() + Length);
-            return area;
-        }
-        private double CurvedArea()
-        {
-            double area = Math.PI * get_radius() * Length;
-            return area;
-        }
-        private double Volume()
-        {
-            double volume = Math.PI * get_radius() * get_radius() * Height/3;
-            return volume;
-        }
+        public override void Draw() => Console.WriteLine("Drawing cone...");
+        public new double Area() => Math.PI * Radius * (Radius + Length);
+        public new double CurvedArea() => Math.PI * Radius * Length;
+        public new double Volume() => Math.PI * Radius * Radius * Height / 3;
         public new void DisplayShape()
         {
             Console.WriteLine($"{ConeNr}. Cone: ");

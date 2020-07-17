@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassDiagram
 {
@@ -9,10 +7,11 @@ namespace ClassDiagram
         private static int count = 1;
         public int SquareNr { get;}
 
-        public Square(Distance side): base(side, side)
+        public Square() { SquareNr = count++; }
+        public Square(Point A, Point B): base(A, B, B)
         {
-            Length = side.distance();
-            Width = side.distance();
+            Length = new Distance(A, B).distance();
+            Width =  new Distance(A, B).distance();
             SquareNr = count++;
 
         }
@@ -22,24 +21,7 @@ namespace ClassDiagram
             Width = side;
             SquareNr = count++;
         }
-        public new void Draw()
-        {
-            Console.WriteLine("Drawing Square...");
-        }
-        private double Area()
-        {
-            return Width * Length;
-        }
-        private double Perimeter()
-        {
-            double perimeter = 2 * Width + 2 * Length;
-            return perimeter;
-        }
-        private double Diagonal()
-        {
-            double diagonal = Math.Sqrt(Width * Width + Length * Length);
-            return diagonal;
-        }
+        public new void Draw() => Console.WriteLine("Drawing Square...");
         public new void DisplayShape()
         {
             Console.WriteLine($"{SquareNr}. Square: ");

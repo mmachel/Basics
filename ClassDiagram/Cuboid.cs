@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassDiagram
 {
@@ -23,13 +21,6 @@ namespace ClassDiagram
             Height = height;
             CuboidNr = count++;
         }
-        public Cuboid(double length)
-        {
-            Length = length;
-            Breadth = length;
-            Height = length;
-            CuboidNr = count++;
-        }
         public Cuboid(Point A, Point B, Point C, Point F)
         {
             InnerBaseLeftConner = A;
@@ -41,22 +32,9 @@ namespace ClassDiagram
             Height = new Distance(InnerBaseRightConner, InnerTopRightConner).distance();
             CuboidNr = count++;
         }
-        public double Area()
-        {
-            double area = 2 * (Length * Breadth + Length * Height + Breadth * Height);
-            return area;
-        }
-        private double Volume()
-        {
-            double volume = Length * Breadth * Height;
-            return volume;
-        }
-
-        public override void Draw()
-        {
-            Console.WriteLine("Drawing cuboid...");
-        }
-
+        public double Area() => 2 * (Length * Breadth + Length * Height + Breadth * Height);
+        public double Volume() => Length * Breadth * Height;
+        public override void Draw() => Console.WriteLine("Drawing cuboid...");
         public void DisplayShape()
         {
             Console.WriteLine($"{CuboidNr}. Cuboid: ");

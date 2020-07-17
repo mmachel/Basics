@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Transactions;
 
 namespace ClassDiagram
 {
     public class Circle : Shape, IShapeInfo
     {
-        private Point Center;
-        private Point Edge;
-        private double Radius;
+        public Point Center { get; set; }
+        public Point Edge { get; set; }
+        public double Radius { get; set; }
         public int CircleNr { get; }
         private static int count = 1;
 
-        public Circle() { }
+        public Circle() { CircleNr = count++; }
         public Circle(Point center, Point edge)
         {
             Center = center;
@@ -22,57 +18,14 @@ namespace ClassDiagram
             Radius = new Distance(Center, Edge).distance();
             CircleNr = count++;
         }
-        public Circle(Distance radius)
-        {
-            Radius = radius.distance();
-            CircleNr = count++;
-        }
         public Circle(double Radius)
         {
             this.Radius = Radius;
             CircleNr = count++;
         }
-
-        public Point get_center()
-        {
-            return Center;
-        }
-        public Point get_edge()
-        {
-            return Edge;
-        }
-
-        public double get_radius()
-        {
-            return Radius;
-        }
-
-        public void set_center(Point center)
-        {
-            Center = center;
-        }
-        public void set_edge(Point edge)
-        {
-            Edge = edge;
-        }
-        public void set_radius(double radius)
-        {
-            Radius = radius;
-        }
-        public override void Draw()
-        {
-            Console.WriteLine("Drawing circles");
-        }
-        public double Area()
-        {
-            double area = Math.PI * Radius * Radius;
-            return area;
-        }
-        public double Perimeter()
-        {
-            double perimeter = 2 * Math.PI * Radius;
-            return perimeter;
-        }
+        public override void Draw() => Console.WriteLine("Drawing circles");
+        public double Area() => Math.PI * Radius * Radius;
+        public double Perimeter() => 2 * Math.PI * Radius;
         public void DisplayShape()
         {
             Console.WriteLine($"{CircleNr}. Circle: ");
