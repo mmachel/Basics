@@ -109,7 +109,7 @@ namespace ClassDiagram
             Console.WriteLine("===========================================================");
             Console.WriteLine("Choose one option:\n" +
                 "1. Triangle\n" +
-                "2. Square");
+                "2. Square\n3. Rectangle\n4. Circle");
             Console.WriteLine("===========================================================");
         }
     }
