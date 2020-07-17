@@ -22,5 +22,6 @@ import: https://raw.githubusercontent.com/liaTemplates/rextester/master/README.m
 # Mathematics and Programming
 
 In this repository I am going to write some codes based on C# and and maybe others like C and Python. I am beginner in Programming World.
+I am writing a code in *ClassDiagram* to calculate area, perimeter and volume of shapes. For that, known can be Points, sides or radius.
 
 **NB.:** *I accept improvement suggestions on my codes.*
