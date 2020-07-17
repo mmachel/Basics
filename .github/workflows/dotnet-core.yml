@@ -25,7 +25,7 @@ jobs:
  
     - name: Generate UML Files
       run: |
-           puml-gen Pets -dir -allInOne -createAssociation
+           puml-gen ClassDiagram -dir -allInOne -createAssociation
  
     - uses: EndBug/add-and-commit@v4 
       with:
