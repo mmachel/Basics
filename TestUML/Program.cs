@@ -22,6 +22,7 @@ namespace TestUML
             Age = age;
         }
         public virtual void Des() => Console.WriteLine("Person is a mamal.");
+        public abstract void Hobby();
         public override string ToString()
         {
             return string.Format($"Name: {Name} and Age: {Age}");
@@ -60,6 +61,11 @@ namespace TestUML
         {
             return "New technology for detecting antimatters and dark energy";
         }
+
+        public override void Hobby()
+        {
+            throw new NotImplementedException();
+        }
     }
     class Scientist : Person, IResearch
     {
@@ -71,6 +77,12 @@ namespace TestUML
         {
             return "Genetic and modernal anatomic technology";
         }
+
+        public override void Hobby()
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             return base.ToString() + "\nResearch Field: " + FieldOfResearch();
@@ -93,7 +105,11 @@ namespace TestUML
             {
                 if (item is ICourse)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(((ICourse)item).Course());
+                }
+                else
+                {
+                    Console.WriteLine("I am not a student of this course");
                 }
             }
             Console.WriteLine("Second: ");
