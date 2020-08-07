@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Klasse", "Klasse\Klasse.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassDiagram", "ClassDiagram\ClassDiagram.csproj", "{0A8B09FD-CFA2-4A7E-B62B-E9AFCAC4D9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pets", "Pets\Pets.csproj", "{D9B3255F-1435-4386-B61C-621F6317B631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pets", "Pets\Pets.csproj", "{D9B3255F-1435-4386-B61C-621F6317B631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUML", "TestUML\TestUML.csproj", "{0494C33F-00CA-4157-B2FF-7A9575B1C7EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D9B3255F-1435-4386-B61C-621F6317B631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9B3255F-1435-4386-B61C-621F6317B631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9B3255F-1435-4386-B61C-621F6317B631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0494C33F-00CA-4157-B2FF-7A9575B1C7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0494C33F-00CA-4157-B2FF-7A9575B1C7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0494C33F-00CA-4157-B2FF-7A9575B1C7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0494C33F-00CA-4157-B2FF-7A9575B1C7EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
