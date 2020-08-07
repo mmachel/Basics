@@ -1,1 +1,23 @@
-
+@startuml
+interface ICourse {
+    Course() : string
+}
+abstract class Person {
+    + Name : string <<get>> <<set>>
+    + Age : int <<get>> <<set>>
+    + Person(name:string, age:int)
+    + <<virtual>> Des() : void
+    + <<override>> ToString() : string
+}
+class Student {
+    + Student(name:string, age:int)
+    + Course() : string
+    + <<override>> Des() : void
+    + <<override>> ToString() : string
+}
+class Program {
+    {static} Main(args:string[]) : void
+}
+Person <|-- Student
+ICourse <|-- Student
+@enduml
