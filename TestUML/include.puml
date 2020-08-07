@@ -2,6 +2,9 @@
 interface ICourse {
     Course() : string
 }
+interface IResearch {
+    FieldOfResearch() : string
+}
 abstract class Person {
     + Name : string <<get>> <<set>>
     + Age : int <<get>> <<set>>
@@ -21,11 +24,20 @@ class Student {
     + Course() : string
     + <<override>> Des() : void
     + <<override>> ToString() : string
+    + FieldOfResearch() : string
+}
+class Scientist {
+    + Scientist(name:string, age:int)
+    + FieldOfResearch() : string
+    + <<override>> ToString() : string
 }
 class Program {
     {static} Main(args:string[]) : void
 }
 Person <|-- Student
 ICourse <|-- Student
+IResearch <|-- Student
 Student --> "Praxis" Practica
+Person <|-- Scientist
+IResearch <|-- Scientist
 @enduml
