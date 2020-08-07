@@ -41,6 +41,7 @@ namespace TestUML
         {
             var student = new Student("Adelaide", 20);
             Console.WriteLine(student);
+            student.Des();
         }
     }
 }
