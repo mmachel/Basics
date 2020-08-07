@@ -22,13 +22,29 @@ namespace TestUML
             return string.Format($"Name: {Name} and Age: {Age}");
         }
     }
+    class Practica
+    {
+        public string CompanyName { get; set; }
+        public string Localization { get; set; }
+        public Practica(string name, string local)
+        {
+            CompanyName = name;
+            Localization = local;
+        }
+        public override string ToString()
+        {
+            return string.Format($"Name of the Company: {CompanyName}\nLocalization: {Localization}");
+        }
+    }
     class Student : Person, ICourse
     {
-        public Student(string name, int age) : base(name, age) { }
-        public string Course()
+        public string ID { get; set; }
+        public Practica Praxis { get; set; }
+        public Student(string name, int age) : base(name, age)
         {
-            return "Information Technology";
+            Praxis = new Practica("Earth exploration", "Earth's north pol");
         }
+        public string Course() => "Information Technology";
         public override void Des() => Console.WriteLine("Student is a person.");
         public override string ToString()
         {
@@ -42,6 +58,7 @@ namespace TestUML
             var student = new Student("Adelaide", 20);
             Console.WriteLine(student);
             student.Des();
+            Console.WriteLine(student.Praxis);
         }
     }
 }
