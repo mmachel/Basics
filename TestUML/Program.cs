@@ -102,7 +102,7 @@ namespace TestUML
                 var res = item as IResearch;
                 if (res != null)
                 {
-                    Console.WriteLine(res);
+                    Console.WriteLine(res.FieldOfResearch());
                 }
             }
         }
