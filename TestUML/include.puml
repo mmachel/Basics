@@ -10,6 +10,7 @@ abstract class Person {
     + Age : int <<get>> <<set>>
     + Person(name:string, age:int)
     + <<virtual>> Des() : void
+    + {abstract} Hobby() : void
     + <<override>> ToString() : string
 }
 class Practica {
@@ -25,10 +26,12 @@ class Student {
     + <<override>> Des() : void
     + <<override>> ToString() : string
     + FieldOfResearch() : string
+    + <<override>> Hobby() : void
 }
 class Scientist {
     + Scientist(name:string, age:int)
     + FieldOfResearch() : string
+    + <<override>> Hobby() : void
     + <<override>> ToString() : string
 }
 class Program {
