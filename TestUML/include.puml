@@ -9,7 +9,14 @@ abstract class Person {
     + <<virtual>> Des() : void
     + <<override>> ToString() : string
 }
+class Practica {
+    + CompanyName : string <<get>> <<set>>
+    + Localization : string <<get>> <<set>>
+    + Practica(name:string, local:string)
+    + <<override>> ToString() : string
+}
 class Student {
+    + ID : string <<get>> <<set>>
     + Student(name:string, age:int)
     + Course() : string
     + <<override>> Des() : void
@@ -20,4 +27,5 @@ class Program {
 }
 Person <|-- Student
 ICourse <|-- Student
+Student --> "Praxis" Practica
 @enduml
