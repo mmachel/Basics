@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 
 namespace TestUML
@@ -6,6 +7,10 @@ namespace TestUML
     interface ICourse
     {
         string Course();
+    }
+    interface IResearch
+    {
+        string FieldOfResearch();
     }
     abstract class Person
     {
@@ -36,7 +41,7 @@ namespace TestUML
             return string.Format($"Name of the Company: {CompanyName}\nLocalization: {Localization}");
         }
     }
-    class Student : Person, ICourse
+    class Student : Person, ICourse, IResearch
     {
         public string ID { get; set; }
         public Practica Praxis { get; set; }
@@ -48,7 +53,27 @@ namespace TestUML
         public override void Des() => Console.WriteLine("Student is a person.");
         public override string ToString()
         {
-            return base.ToString() + " Course: " + Course();
+            return base.ToString() + " Course: " + Course() + "\nResearch Field: " + FieldOfResearch();
+        }
+
+        public string FieldOfResearch()
+        {
+            return "New technology for detecting antimatters and dark energy";
+        }
+    }
+    class Scientist : Person, IResearch
+    {
+        public Scientist(string name, int age) : base(name, age)
+        {
+        }
+
+        public string FieldOfResearch()
+        {
+            return "Genetic and modernal anatomic technology";
+        }
+        public override string ToString()
+        {
+            return base.ToString() + "\nResearch Field: " + FieldOfResearch();
         }
     }
     class Program
@@ -56,9 +81,30 @@ namespace TestUML
         static void Main(string[] args)
         {
             var student = new Student("Adelaide", 20);
-            Console.WriteLine(student);
-            student.Des();
-            Console.WriteLine(student.Praxis);
+            //Console.WriteLine(student);
+            //student.Des();
+            //Console.WriteLine(student.Praxis);
+            var scientist = new Scientist("Ada Adelaide", 20);
+            var list = new List<Person>();
+            list.Add(student);
+            list.Add(scientist);
+            Console.WriteLine("First: ");
+            foreach (var item in list)
+            {
+                if (item is ICourse)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            Console.WriteLine("Second: ");
+            foreach (var item in list)
+            {
+                var res = item as IResearch;
+                if (res != null)
+                {
+                    Console.WriteLine(res);
+                }
+            }
         }
     }
 }
