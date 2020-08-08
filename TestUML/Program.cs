@@ -1,126 +1,77 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
-namespace Test
+namespace Rextester
 {
-   
-}
-namespace TestUML
-{
-    interface ICourse
+    class myStrings : IEnumerable<string>
     {
-        string Course { get; set; }
-    }
-    interface IResearch
-    {
-        string FieldOfResearch { get; set; }
-    }
-    abstract class Person
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public Person(string name, int age)
+        public string[] str_arr = new string[] { "one", "two", "three", "four", "five" };
+
+        public IEnumerator<string> GetEnumerator()
         {
-            Name = name;
-            Age = age;
-        }
-        public virtual void Des() => Console.WriteLine("Person is a mamal.");
-        public abstract void Hobby();
-        public override string ToString()
-        {
-            return string.Format($"Name: {Name} and Age: {Age}");
-        }
-    }
-    class Practica
-    {
-        public string CompanyName { get; set; }
-        public string Localization { get; set; }
-        public Practica(string name, string local)
-        {
-            CompanyName = name;
-            Localization = local;
-        }
-        public override string ToString()
-        {
-            return string.Format($"Name of the Company: {CompanyName}\nLocalization: {Localization}");
-        }
-    }
-    class Student : Person, ICourse, IResearch
-    {
-        public string ID { get; set; }
-        public Practica Praxis { get; set; }
-        public string FieldOfResearch { get; set; }
-        public string Course { get; set; }
-        public Student(string name, int age) : base(name, age)
-        {
-            Praxis = new Practica("Earth exploration", "Earth's north pol");
-            FieldOfResearch = "New technology for detecting antimatters and dark energy";
-            Course = "Information Technology";
-        }
-        public override void Des() => Console.WriteLine("Student is a person.");
-        public override string ToString()
-        {
-            return base.ToString() + " Course: " + Course + "\nResearch Field: " + FieldOfResearch;
+            IEnumerator<string> r = new StringEnumerator(this);
+            return r;
         }
 
-        public override void Hobby()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
-    class Scientist : Person, IResearch
+
+    class StringEnumerator : IEnumerator<string>
     {
-        public string FieldOfResearch { get; set; }
-        public Scientist(string name, int age) : base(name, age)
+        int index;
+        myStrings sp;
+
+        public StringEnumerator(myStrings str_obj)
         {
-            FieldOfResearch = "Genetic and modernal anatomic technology";
-        } 
-        public override void Hobby()
-        {
-            throw new NotImplementedException();
+            index = -1;
+            sp = str_obj;
         }
 
-        public override string ToString()
+        object IEnumerator.Current
         {
-            return base.ToString() + "\nResearch Field: " + FieldOfResearch;
+            get
+            { return sp.str_arr[index]; }
+        }
+
+        public string Current
+        {
+            get
+            { return sp.str_arr[index]; }
+        }
+
+        public bool MoveNext()
+        {
+            if (index < sp.str_arr.Length - 1)
+            {
+                index++;
+                return true;
+            }
+            return false;
+        }
+
+        public void Reset()
+        {
+            index = -1;
+        }
+
+        public void Dispose()
+        {
+            // pass
         }
     }
+
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var student = new Student("Adelaide", 20);
-            //Console.WriteLine(student);
-            //student.Des();
-            //Console.WriteLine(student.Praxis);
-            var scientist = new Scientist("Ada Adelaide", 20);
-            var list = new List<Person>();
-            list.Add(student);
-            list.Add(scientist);
-            Console.WriteLine("First: ");
-            foreach (var item in list)
-            {
-                if (item is ICourse)
-                {
-                    Console.WriteLine(((ICourse)item).Course);
-                }
-                else
-                {
-                    Console.WriteLine("I am not a student of this course");
-                }
-            }
-            Console.WriteLine("Second: ");
-            foreach (var item in list)
-            {
-                var res = item as IResearch;
-                if (res != null)
-                {
-                    Console.WriteLine(res.FieldOfResearch);
-                }
-            }
+            myStrings spp = new myStrings();
 
-            
+            foreach (string i in spp)
+                System.Console.WriteLine(i);
         }
     }
 }
