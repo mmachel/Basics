@@ -1,25 +1,46 @@
 @startuml
-class myStrings {
-    + GetEnumerator() : IEnumerator<string>
-    GetEnumerator() : IEnumerator
+interface ICourse {
+    Course : string <<get>> <<set>>
 }
-class StringEnumerator {
-    index : int
-    + StringEnumerator(str_obj:myStrings)
-    Current : object <<get>>
-    + Current : string <<get>>
-    + MoveNext() : bool
-    + Reset() : void
-    + Dispose() : void
+interface IResearch {
+    FieldOfResearch : string <<get>> <<set>>
+}
+abstract class Person {
+    + Name : string <<get>> <<set>>
+    + Age : int <<get>> <<set>>
+    + Person(name:string, age:int)
+    + <<virtual>> Des() : void
+    + {abstract} Hobby() : void
+    + <<override>> ToString() : string
+}
+class Practica {
+    + CompanyName : string <<get>> <<set>>
+    + Localization : string <<get>> <<set>>
+    + Practica(name:string, local:string)
+    + <<override>> ToString() : string
+}
+class Student {
+    + ID : string <<get>> <<set>>
+    + FieldOfResearch : string <<get>> <<set>>
+    + Course : string <<get>> <<set>>
+    + Student(name:string, age:int)
+    + <<override>> Des() : void
+    + <<override>> ToString() : string
+    + <<override>> Hobby() : void
+}
+class Scientist {
+    + FieldOfResearch : string <<get>> <<set>>
+    + Scientist(name:string, age:int)
+    + <<override>> Hobby() : void
+    + <<override>> ToString() : string
 }
 class Program {
-    + {static} Main(args:string[]) : void
+    {static} Main(args:string[]) : void
 }
-class "IEnumerable`1"<T> {
-}
-class "IEnumerator`1"<T> {
-}
-"IEnumerable`1" "<string>" <|-- myStrings
-"IEnumerator`1" "<string>" <|-- StringEnumerator
-StringEnumerator --> "sp" myStrings
+Person <|-- Student
+ICourse <|-- Student
+IResearch <|-- Student
+Student --> "Praxis" Practica
+Person <|-- Scientist
+IResearch <|-- Scientist
 @enduml
