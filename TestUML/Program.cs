@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 
+namespace Test
+{
+   
+}
 namespace TestUML
 {
     interface ICourse
     {
-        string Course();
+        string Course { get; set; }
     }
     interface IResearch
     {
-        string FieldOfResearch();
+        string FieldOfResearch { get; set; }
     }
     abstract class Person
     {
@@ -46,20 +50,18 @@ namespace TestUML
     {
         public string ID { get; set; }
         public Practica Praxis { get; set; }
+        public string FieldOfResearch { get; set; }
+        public string Course { get; set; }
         public Student(string name, int age) : base(name, age)
         {
             Praxis = new Practica("Earth exploration", "Earth's north pol");
+            FieldOfResearch = "New technology for detecting antimatters and dark energy";
+            Course = "Information Technology";
         }
-        public string Course() => "Information Technology";
         public override void Des() => Console.WriteLine("Student is a person.");
         public override string ToString()
         {
-            return base.ToString() + " Course: " + Course() + "\nResearch Field: " + FieldOfResearch();
-        }
-
-        public string FieldOfResearch()
-        {
-            return "New technology for detecting antimatters and dark energy";
+            return base.ToString() + " Course: " + Course + "\nResearch Field: " + FieldOfResearch;
         }
 
         public override void Hobby()
@@ -69,15 +71,11 @@ namespace TestUML
     }
     class Scientist : Person, IResearch
     {
+        public string FieldOfResearch { get; set; }
         public Scientist(string name, int age) : base(name, age)
         {
-        }
-
-        public string FieldOfResearch()
-        {
-            return "Genetic and modernal anatomic technology";
-        }
-
+            FieldOfResearch = "Genetic and modernal anatomic technology";
+        } 
         public override void Hobby()
         {
             throw new NotImplementedException();
@@ -85,7 +83,7 @@ namespace TestUML
 
         public override string ToString()
         {
-            return base.ToString() + "\nResearch Field: " + FieldOfResearch();
+            return base.ToString() + "\nResearch Field: " + FieldOfResearch;
         }
     }
     class Program
@@ -105,7 +103,7 @@ namespace TestUML
             {
                 if (item is ICourse)
                 {
-                    Console.WriteLine(((ICourse)item).Course());
+                    Console.WriteLine(((ICourse)item).Course);
                 }
                 else
                 {
@@ -118,9 +116,11 @@ namespace TestUML
                 var res = item as IResearch;
                 if (res != null)
                 {
-                    Console.WriteLine(res.FieldOfResearch());
+                    Console.WriteLine(res.FieldOfResearch);
                 }
             }
+
+            
         }
     }
 }
