@@ -32,7 +32,7 @@ namespace Use
         }
         public override string ToString()
         {
-            return string.Format($"Name: {Name}\nAge: {Age}\nAdresse: {Address})");
+            return string.Format($"Name: {Name}\nAge: {Age}\nAdresse: {Address}");
         }
     }
     abstract class Worker : Person
@@ -44,7 +44,7 @@ namespace Use
         }
         public override string ToString()
         {
-            return base.ToString() + $"\nSalary: {Salary}";
+            return base.ToString() + $"\nSalary: {Salary:C2}";
         }
     }
     class Arbeiter : Worker
@@ -195,12 +195,12 @@ namespace Use
             client3.BuyProduct(fabric.OurProducts[5], 4);
 
             //Display clients with their bought products
-            /*Console.WriteLine("First cleint with his/her stuff: ");
-            Console.WriteLine(client1);
-            client1.BoughtProducts();
-            Console.WriteLine("Second cleint with his/her stuff: ");
-            Console.WriteLine(client2);
-            client2.BoughtProducts(); */
+            //Console.WriteLine("First cleint with his/her stuff: ");
+            //Console.WriteLine(client1);
+            //client1.BoughtProducts();
+            //Console.WriteLine("Second cleint with his/her stuff: ");
+            //Console.WriteLine(client2);
+            //client2.BoughtProducts(); 
 
             //Fabric workers
             //var worker1 = fabric.OurWorkers[0];
