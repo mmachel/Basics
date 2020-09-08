@@ -1,46 +1,62 @@
 @startuml
-interface ICourse {
-    Course : string <<get>> <<set>>
-}
-interface IResearch {
-    FieldOfResearch : string <<get>> <<set>>
+class Adresse {
+    + StreetName : string <<get>> <<set>>
+    + HouseNumber : string <<get>> <<set>>
+    + City_AndPO_Box : string <<get>> <<set>>
+    + Adresse(street:string, house:string, city:string)
+    + <<override>> ToString() : string
 }
 abstract class Person {
-    + Name : string <<get>> <<set>>
-    + Age : int <<get>> <<set>>
-    + Person(name:string, age:int)
-    + <<virtual>> Des() : void
-    + {abstract} Hobby() : void
+    + Name : string <<get>>
+    + Age : int <<get>>
+    + Person(name:string, age:int, address:Adresse)
     + <<override>> ToString() : string
 }
-class Practica {
-    + CompanyName : string <<get>> <<set>>
-    + Localization : string <<get>> <<set>>
-    + Practica(name:string, local:string)
+abstract class Worker {
+    + Salary : decimal <<get>> <<set>>
+    + Worker(name:string, age:int, address:Adresse, salary:decimal)
     + <<override>> ToString() : string
 }
-class Student {
-    + ID : string <<get>> <<set>>
-    + FieldOfResearch : string <<get>> <<set>>
-    + Course : string <<get>> <<set>>
-    + Student(name:string, age:int)
-    + <<override>> Des() : void
-    + <<override>> ToString() : string
-    + <<override>> Hobby() : void
+class Arbeiter {
+    + Arbeiter(name:string, age:int, address:Adresse, salary:decimal)
 }
-class Scientist {
-    + FieldOfResearch : string <<get>> <<set>>
-    + Scientist(name:string, age:int)
-    + <<override>> Hobby() : void
+class Angestellter {
+    + Angestellter(name:string, age:int, address:Adresse, salary:decimal)
+}
+class Client {
+    + Client(name:string, age:int, address:Adresse)
+    + BuyProduct(p:Product, amount:int) : void
+    + BoughtProducts() : void
     + <<override>> ToString() : string
+}
+class Product {
+    + ProductName : string <<get>> <<set>>
+    + Product(name:string)
+    + <<override>> ToString() : string
+}
+class Fabric {
+    + Fabric(adress:Adresse)
+    + AddProduct(p:Product) : void
+    + AddClient(c:Client) : void
+    + AddWorker(w:Worker) : void
+    + Products() : void
+    + Clients() : void
+    + Workers() : void
 }
 class Program {
     {static} Main(args:string[]) : void
 }
-Person <|-- Student
-ICourse <|-- Student
-IResearch <|-- Student
-Student --> "Praxis" Practica
-Person <|-- Scientist
-IResearch <|-- Scientist
+class "List`1"<T> {
+}
+Person --> "Address" Adresse
+Person <|-- Worker
+Worker <|-- Arbeiter
+Worker <|-- Angestellter
+Person <|-- Client
+Client --> "Products<Product>" "List`1"
+Fabric --> "Address" Adresse
+Fabric --> "OurProducts<Product>" "List`1"
+Fabric --> "OurClients<Client>" "List`1"
+Fabric --> "OurWorkers<Worker>" "List`1"
+Fabric --> "Manager" Worker
 @enduml
